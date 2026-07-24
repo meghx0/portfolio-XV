@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-cream-100 text-ink-900 font-sans antialiased;
+  }
+  ::selection {
+    @apply bg-lime-400 text-ink-900;
+  }
+}
+
+@layer utilities {
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .brutal {
+    @apply border-2 border-ink-900 bg-cream-50;
+    box-shadow: 4px 4px 0 0 #0a0a0a;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .brutal:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 0 #0a0a0a;
+  }
+  .brutal-sm {
+    @apply border-2 border-ink-900 bg-cream-50;
+    box-shadow: 3px 3px 0 0 #0a0a0a;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .brutal-sm:hover {
+    transform: translate(-1px, -1px);
+    box-shadow: 4px 4px 0 0 #0a0a0a;
+  }
+  .brutal-lime {
+    @apply border-2 border-ink-900 bg-lime-400;
+    box-shadow: 4px 4px 0 0 #0a0a0a;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .brutal-lime:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 0 #0a0a0a;
+  }
+  .brutal-coral {
+    @apply border-2 border-ink-900 bg-coral-500;
+    box-shadow: 4px 4px 0 0 #0a0a0a;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .brutal-coral:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 0 #0a0a0a;
+  }
+  .brutal-sky {
+    @apply border-2 border-ink-900 bg-sky-400;
+    box-shadow: 4px 4px 0 0 #0a0a0a;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .brutal-sky:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 0 #0a0a0a;
+  }
+  .brutal-sun {
+    @apply border-2 border-ink-900 bg-sun-400;
+    box-shadow: 4px 4px 0 0 #0a0a0a;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .brutal-sun:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 0 #0a0a0a;
+  }
+  .label-mono {
+    @apply font-mono text-xs font-bold uppercase tracking-widest;
+  }
+  .grid-bg {
+    background-image:
+      linear-gradient(rgba(10, 10, 10, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(10, 10, 10, 0.04) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  background: #fbf8f0;
+}
+::-webkit-scrollbar-thumb {
+  background: #0a0a0a;
+  border: 3px solid #fbf8f0;
+}
