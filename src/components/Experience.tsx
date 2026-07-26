@@ -87,16 +87,16 @@ export default function Experience() {
       <div ref={ref} className="mx-auto max-w-4xl px-5">
         <div className={`reveal ${visible ? 'is-visible' : ''} max-w-2xl`}>
           <p className="label-mono text-coral-500">[ Experience ]</p>
-          <h2 className="mt-3 font-display text-4xl font-bold tracking-tight text-ink-900 sm:text-5xl">
+          <h2 className="mt-3 font-display text-4xl font-bold tracking-tight text-ink-900 dark:text-cream-100 sm:text-5xl">
             A track record of shipping
           </h2>
-          <p className="mt-4 text-lg text-ink-600">
+          <p className="mt-4 text-lg text-ink-600 dark:text-cream-300">
             Six years across product teams and freelance engagements. Here is the path.
           </p>
         </div>
 
         <div className="relative mt-12">
-          <div className="absolute left-5 top-2 bottom-2 w-0.5 border-l-2 border-dashed border-ink-400" />
+          <div className="absolute left-5 top-2 bottom-2 w-0.5 border-l-2 border-dashed border-ink-400 dark:border-cream-400" />
 
           <div className="space-y-6">
             {roles.map((r, i) => (
@@ -105,14 +105,14 @@ export default function Experience() {
                 className={`reveal ${visible ? 'is-visible' : ''} relative pl-16`}
                 style={{ transitionDelay: `${i * 100}ms` }}
               >
-                <div className="absolute left-0 top-1.5 flex h-11 w-11 items-center justify-center border-2 border-ink-900 bg-lime-400 shadow-[3px_3px_0_0_#0a0a0a]">
+                <div className="absolute left-0 top-1.5 flex h-11 w-11 items-center justify-center border-2 border-ink-900 dark:border-cream-100 bg-lime-400 shadow-[3px_3px_0_0_#0a0a0a] dark:shadow-[3px_3px_0_0_#fbf8f0]">
                   <Briefcase className="h-5 w-5 text-ink-900" />
                 </div>
 
-                <div className="border-2 border-ink-900 bg-cream-50 p-6 shadow-[4px_4px_0_0_#0a0a0a] transition-all hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[6px_6px_0_0_#0a0a0a]">
+                <div className="border-2 border-ink-900 dark:border-cream-100 bg-cream-50 dark:bg-ink-800 p-6 shadow-[4px_4px_0_0_#0a0a0a] dark:shadow-[4px_4px_0_0_#fbf8f0] transition-all hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[6px_6px_0_0_#0a0a0a] dark:hover:shadow-[6px_6px_0_0_#fbf8f0]">
                   <div className="flex flex-wrap items-start justify-between gap-2">
                     <div>
-                      <h3 className="font-display text-lg font-bold text-ink-900">
+                      <h3 className="font-display text-lg font-bold text-ink-900 dark:text-cream-100">
                         {r.title}
                       </h3>
                       <p className="font-mono text-xs font-bold uppercase tracking-wider text-coral-500">
@@ -120,22 +120,22 @@ export default function Experience() {
                       </p>
                     </div>
                     <div className="text-right">
-                      <span className="inline-block border-2 border-ink-900 bg-sun-400 px-2.5 py-1 font-mono text-xs font-bold text-ink-900">
+                      <span className="inline-block border-2 border-ink-900 dark:border-cream-100 bg-sun-400 px-2.5 py-1 font-mono text-xs font-bold text-ink-900">
                         {r.period}
                       </span>
-                      <p className="mt-1.5 flex items-center justify-end gap-1 font-mono text-[11px] font-bold text-ink-500">
+                      <p className="mt-1.5 flex items-center justify-end gap-1 font-mono text-[11px] font-bold text-ink-500 dark:text-cream-400">
                         <MapPin className="h-3 w-3" />
                         {r.location}
                       </p>
                     </div>
                   </div>
 
-                  <p className="mt-3 text-sm text-ink-600">{r.summary}</p>
+                  <p className="mt-3 text-sm text-ink-600 dark:text-cream-300">{r.summary}</p>
 
                   <ul className="mt-4 space-y-2">
                     {r.highlights.map((h) => (
-                      <li key={h} className="flex items-start gap-2.5 text-sm text-ink-700">
-                        <span className="mt-1.5 h-2.5 w-2.5 shrink-0 border-2 border-ink-900 bg-coral-500" />
+                      <li key={h} className="flex items-start gap-2.5 text-sm text-ink-700 dark:text-cream-200">
+                        <span className="mt-1.5 h-2.5 w-2.5 shrink-0 border-2 border-ink-900 dark:border-cream-100 bg-coral-500" />
                         {h}
                       </li>
                     ))}

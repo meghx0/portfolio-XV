@@ -18,10 +18,10 @@ export default function Services() {
       <div ref={ref} className="mx-auto max-w-6xl px-5">
         <div className={`reveal ${visible ? 'is-visible' : ''} max-w-2xl`}>
           <p className="label-mono text-coral-500">[ Services ]</p>
-          <h2 className="mt-3 font-display text-4xl font-bold tracking-tight text-ink-900 sm:text-5xl">
+          <h2 className="mt-3 font-display text-4xl font-bold tracking-tight text-ink-900 dark:text-cream-100 sm:text-5xl">
             How I can help
           </h2>
-          <p className="mt-4 text-lg text-ink-600">
+          <p className="mt-4 text-lg text-ink-600 dark:text-cream-300">
             Flexible engagements — project-based, retainer, or embedded with your team.
           </p>
         </div>
@@ -30,16 +30,16 @@ export default function Services() {
           {services.map((s, i) => (
             <div
               key={s.title}
-              className={`reveal ${visible ? 'is-visible' : ''} border-2 border-ink-900 bg-cream-50 p-6 shadow-[4px_4px_0_0_#0a0a0a] transition-all hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[6px_6px_0_0_#0a0a0a]`}
+              className={`reveal ${visible ? 'is-visible' : ''} border-2 border-ink-900 dark:border-cream-100 bg-cream-50 dark:bg-ink-800 p-6 shadow-[4px_4px_0_0_#0a0a0a] dark:shadow-[4px_4px_0_0_#fbf8f0] transition-all hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[6px_6px_0_0_#0a0a0a] dark:hover:shadow-[6px_6px_0_0_#fbf8f0]`}
               style={{ transitionDelay: `${i * 70}ms` }}
             >
-              <span className={`flex h-12 w-12 items-center justify-center border-2 border-ink-900 ${s.color} shadow-[3px_3px_0_0_#0a0a0a]`}>
+              <span className={`flex h-12 w-12 items-center justify-center border-2 border-ink-900 dark:border-cream-100 ${s.color} shadow-[3px_3px_0_0_#0a0a0a] dark:shadow-[3px_3px_0_0_#fbf8f0]`}>
                 <s.Icon className="h-5 w-5 text-ink-900" />
               </span>
-              <h3 className="mt-4 font-display text-base font-bold text-ink-900">
+              <h3 className="mt-4 font-display text-base font-bold text-ink-900 dark:text-cream-100">
                 {s.title}
               </h3>
-              <p className="mt-2 text-sm leading-relaxed text-ink-600">{s.desc}</p>
+              <p className="mt-2 text-sm leading-relaxed text-ink-600 dark:text-cream-300">{s.desc}</p>
             </div>
           ))}
         </div>

@@ -11,7 +11,7 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="relative min-h-screen overflow-x-hidden bg-cream-100">
+    <div className="relative min-h-screen overflow-x-hidden bg-cream-100 dark:bg-ink-900 transition-colors duration-300">
       <Navbar />
       <main>
         <Hero />

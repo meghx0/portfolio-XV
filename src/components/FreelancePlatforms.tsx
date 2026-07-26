@@ -19,7 +19,7 @@ const platforms: Platform[] = [
     handle: '@0xmeghdev',
     url: 'https://contra.com/0xmeghdev',
     rating: '5.0',
-    reviews: 2, // Update this with your actual review count!
+    reviews: 2,
     color: 'bg-sky-400',
     badge: 'Featured',
     stats: [
@@ -39,10 +39,10 @@ export default function FreelancePlatforms() {
       <div ref={ref} className="mx-auto max-w-6xl px-5">
         <div className={`reveal ${visible ? 'is-visible' : ''} max-w-2xl`}>
           <p className="label-mono text-coral-500">[ Freelance Platforms ]</p>
-          <h2 className="mt-3 font-display text-4xl font-bold tracking-tight text-ink-900 sm:text-5xl">
+          <h2 className="mt-3 font-display text-4xl font-bold tracking-tight text-ink-900 dark:text-cream-100 sm:text-5xl">
             You can hire me here too
           </h2>
-          <p className="mt-4 text-lg text-ink-600">
+          <p className="mt-4 text-lg text-ink-600 dark:text-cream-300">
             Verified profiles across the top freelance platforms. Reviews, ratings, and track
             records — all public, all earned.
           </p>
@@ -52,32 +52,32 @@ export default function FreelancePlatforms() {
           {platforms.map((p, i) => (
             <div
               key={p.name}
-              className={`reveal ${visible ? 'is-visible' : ''} group relative block border-2 border-ink-900 bg-cream-50 p-6 shadow-[4px_4px_0_0_#0a0a0a] transition-all hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[6px_6px_0_0_#0a0a0a] cursor-pointer`}
+              className={`reveal ${visible ? 'is-visible' : ''} group relative block border-2 border-ink-900 dark:border-cream-100 bg-cream-50 dark:bg-ink-800 p-6 shadow-[4px_4px_0_0_#0a0a0a] dark:shadow-[4px_4px_0_0_#fbf8f0] transition-all hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[6px_6px_0_0_#0a0a0a] dark:hover:shadow-[6px_6px_0_0_#fbf8f0] cursor-pointer`}
               style={{ transitionDelay: `${i * 80}ms` }}
               onClick={() => window.open(p.url, '_blank', 'noopener,noreferrer')}
             >
               {/* Header */}
               <div className="flex items-start justify-between">
                 <div className="flex items-center gap-3">
-                  <span className={`flex h-12 w-12 items-center justify-center border-2 border-ink-900 ${p.color} font-display text-lg font-bold text-ink-900`}>
+                  <span className={`flex h-12 w-12 items-center justify-center border-2 border-ink-900 dark:border-cream-100 ${p.color} font-display text-lg font-bold text-ink-900`}>
                     {p.name.charAt(0)}
                   </span>
                   <div>
-                    <h3 className="font-display text-xl font-bold text-ink-900">{p.name}</h3>
-                    <p className="font-mono text-xs font-bold text-ink-500">{p.handle}</p>
+                    <h3 className="font-display text-xl font-bold text-ink-900 dark:text-cream-100">{p.name}</h3>
+                    <p className="font-mono text-xs font-bold text-ink-500 dark:text-cream-400">{p.handle}</p>
                   </div>
                 </div>
-                <ExternalLink className="h-5 w-5 text-ink-400 transition-colors group-hover:text-ink-900" />
+                <ExternalLink className="h-5 w-5 text-ink-400 dark:text-cream-400 transition-colors group-hover:text-ink-900 dark:group-hover:text-cream-100" />
               </div>
 
               {/* Rating + badge */}
               <div className="mt-4 flex items-center gap-3">
-                <span className="inline-flex items-center gap-1 border-2 border-ink-900 bg-cream-100 px-2.5 py-1">
+                <span className="inline-flex items-center gap-1 border-2 border-ink-900 dark:border-cream-100 bg-cream-100 dark:bg-ink-700 px-2.5 py-1">
                   <Star className="h-3.5 w-3.5 fill-coral-500 text-coral-500" />
-                  <span className="font-mono text-xs font-bold text-ink-900">{p.rating}</span>
-                  <span className="font-mono text-xs text-ink-500">({p.reviews})</span>
+                  <span className="font-mono text-xs font-bold text-ink-900 dark:text-cream-100">{p.rating}</span>
+                  <span className="font-mono text-xs text-ink-500 dark:text-cream-400">({p.reviews})</span>
                 </span>
-                <span className={`inline-block border-2 border-ink-900 ${p.color} px-2.5 py-1 font-mono text-xs font-bold text-ink-900`}>
+                <span className={`inline-block border-2 border-ink-900 dark:border-cream-100 ${p.color} px-2.5 py-1 font-mono text-xs font-bold text-ink-900`}>
                   {p.badge}
                 </span>
               </div>
@@ -85,10 +85,10 @@ export default function FreelancePlatforms() {
               {/* Stats */}
               <div className="mt-5 grid grid-cols-3 gap-2">
                 {p.stats.map((s) => (
-                  <div key={s.label} className="border-2 border-ink-900 bg-cream-100 p-3 text-center">
-                    <s.icon className="mx-auto h-4 w-4 text-ink-700" />
-                    <div className="mt-1.5 font-display text-sm font-bold text-ink-900">{s.value}</div>
-                    <div className="mt-0.5 font-mono text-[10px] font-bold uppercase tracking-wider text-ink-500">
+                  <div key={s.label} className="border-2 border-ink-900 dark:border-cream-100 bg-cream-100 dark:bg-ink-700 p-3 text-center">
+                    <s.icon className="mx-auto h-4 w-4 text-ink-700 dark:text-cream-200" />
+                    <div className="mt-1.5 font-display text-sm font-bold text-ink-900 dark:text-cream-100">{s.value}</div>
+                    <div className="mt-0.5 font-mono text-[10px] font-bold uppercase tracking-wider text-ink-500 dark:text-cream-400">
                       {s.label}
                     </div>
                   </div>
@@ -96,7 +96,7 @@ export default function FreelancePlatforms() {
               </div>
 
               {/* Description */}
-              <p className="mt-5 text-sm leading-relaxed text-ink-600">{p.description}</p>
+              <p className="mt-5 text-sm leading-relaxed text-ink-600 dark:text-cream-300">{p.description}</p>
               {/* Hire Me Button only for Contra */}
               {p.name === 'Contra' && (
                 <div className="mt-4">
@@ -105,7 +105,7 @@ export default function FreelancePlatforms() {
                       e.stopPropagation();
                       window.open('https://contra.com/0xmeghdev', '_blank', 'noopener,noreferrer');
                     }}
-                    className="w-full flex items-center justify-center gap-2 border-2 border-ink-900 bg-coral-500 px-4 py-2 font-mono text-xs font-bold uppercase tracking-wider text-cream-50 shadow-[3px_3px_0_0_#0a0a0a] transition-all hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[5px_5px_0_0_#0a0a0a]"
+                    className="w-full flex items-center justify-center gap-2 border-2 border-ink-900 dark:border-cream-100 bg-coral-500 px-4 py-2 font-mono text-xs font-bold uppercase tracking-wider text-cream-50 dark:text-ink-900 shadow-[3px_3px_0_0_#0a0a0a] dark:shadow-[3px_3px_0_0_#fbf8f0] transition-all hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[5px_5px_0_0_#0a0a0a] dark:hover:shadow-[5px_5px_0_0_#fbf8f0]"
                   >
                     Hire me on Contra
                   </button>

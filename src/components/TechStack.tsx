@@ -31,10 +31,10 @@ export default function TechStack() {
       <div ref={ref} className="mx-auto max-w-6xl px-5">
         <div className={`reveal ${visible ? 'is-visible' : ''} max-w-2xl`}>
           <p className="label-mono text-coral-500">[ Tech Stack ]</p>
-          <h2 className="mt-3 font-display text-4xl font-bold tracking-tight text-ink-900 sm:text-5xl">
+          <h2 className="mt-3 font-display text-4xl font-bold tracking-tight text-ink-900 dark:text-cream-100 sm:text-5xl">
             Tools I use to ship
           </h2>
-          <p className="mt-4 text-lg text-ink-600">
+          <p className="mt-4 text-lg text-ink-600 dark:text-cream-300">
             I pick the right tool for the job. These are the ones I reach for most.
           </p>
         </div>
@@ -43,17 +43,17 @@ export default function TechStack() {
           {categories.map((cat, i) => (
             <div
               key={cat.title}
-              className={`reveal ${visible ? 'is-visible' : ''} border-2 border-ink-900 bg-cream-50 p-6 shadow-[4px_4px_0_0_#0a0a0a] transition-all hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[6px_6px_0_0_#0a0a0a]`}
+              className={`reveal ${visible ? 'is-visible' : ''} border-2 border-ink-900 dark:border-cream-100 bg-cream-50 dark:bg-ink-800 p-6 shadow-[4px_4px_0_0_#0a0a0a] dark:shadow-[4px_4px_0_0_#fbf8f0] transition-all hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[6px_6px_0_0_#0a0a0a] dark:hover:shadow-[6px_6px_0_0_#fbf8f0]`}
               style={{ transitionDelay: `${i * 80}ms` }}
             >
-              <span className={`${cat.color} inline-block border-2 border-ink-900 px-3 py-1 font-mono text-xs font-bold uppercase tracking-wider text-ink-900`}>
+              <span className={`${cat.color} inline-block border-2 border-ink-900 dark:border-cream-100 px-3 py-1 font-mono text-xs font-bold uppercase tracking-wider text-ink-900`}>
                 {cat.title}
               </span>
               <div className="mt-4 flex flex-wrap gap-2.5">
                 {cat.items.map((item) => (
                   <span
                     key={item}
-                    className="border-2 border-ink-900 bg-cream-100 px-3 py-1.5 font-mono text-xs font-bold text-ink-800 transition-colors hover:bg-lime-400"
+                    className="border-2 border-ink-900 dark:border-cream-100 bg-cream-100 dark:bg-ink-700 px-3 py-1.5 font-mono text-xs font-bold text-ink-800 dark:text-cream-200 transition-colors hover:bg-lime-400 dark:hover:bg-lime-400 dark:hover:text-ink-900"
                   >
                     {item}
                   </span>
