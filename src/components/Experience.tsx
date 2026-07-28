@@ -30,12 +30,11 @@ const roles: Role[] = [
     period: 'Feb 2025 - Jan 2026',
     location: 'US,Remote',
     summary:
-      'It is a Personal AI Mentor that teaches, instantly evaluates Handwritten Answers & builds Daily Discipline, and it is backed by YCombinators and google for startups.',
+      'A site which use AI models to answer your business related queries and news',
     highlights: [
-      'Developed React frontend with Vite, integrating Golang backend for seamless functionality alongside the teamleads.',
-      'Created reusable React components for scalable and efficient development.',
-      'Integrated Firebase Authentication, Analytics, and Push Notifications for secure user login, real-time data syncing, and customer engagement.',
-      'Implemented APIs and backend services in line with design specifications using Golang (very minimal).',
+      'Worked on the full web ecosystem including a Consumer webapp frontend, dashboard frontend as well as backend, and payment systems. ',
+      'Using Supabase for backend — Edge functions, RPC functions, Cron jobs, custom Auth Hooks, Webhooks and Triggers.',
+      'Integrated stripe for payments and Autopay triggered via webhooks, using a queue-based architecture to recharge user wallets.',
     ],
   },
   {
