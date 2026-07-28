@@ -14,7 +14,7 @@ const roles: Role[] = [
   {
     company: 'Pangea',
     title: 'Fullstack Developer',
-    period: 'Mar 2025 - Present',
+    period: 'Mar 2026 - Present',
     location: 'US,Remote',
     summary:
       'Product and AI service firm',
