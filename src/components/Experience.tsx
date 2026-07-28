@@ -90,7 +90,7 @@ export default function Experience() {
             A track record of shipping
           </h2>
           <p className="mt-4 text-lg text-ink-600 dark:text-cream-300">
-            Six years across product teams and freelance engagements. Here is the path.
+            Three years across product teams and freelance engagements. Here is the path.
           </p>
         </div>
 
