@@ -3,7 +3,7 @@ import { useReveal } from '../hooks/useReveal';
 const companies = [
   { name: 'Ascend Coffee', logo: '/logos/Ascendcoffee.svg', url: 'https://www.ascendroasters.com/' },
   { name: 'Superkalam', logo: '/logos/Superkalam.svg', url: 'https://superkalam.com/' },
-  { name: 'Hornet', logo: '/logos/hornet.svg', url: '#' },
+  //{ name: 'Hornet', logo: '/logos/hornet.svg', url: '#' },
   { name: 'Mindweb Ventures', logo: '/logos/mindwebventures.svg', url: 'http://mindwebs.org/' },
   { name: 'Pre Dev', logo: '/logos/pre_dev.svg', url: 'https://pre.dev/' },
   { name: 'Rocket Monk', logo: '/logos/rocketmonk.svg', url: 'https://rocketmonk.io/' },
